@@ -1,0 +1,17 @@
+import random as r
+import time as t
+a = True
+
+slot = [0]*3
+for k in range(3) :
+    slot[k] = r.randint(7,10)  # 무작위 수 7, 8, 9 생성
+    print('%d ' % slot[k], end = '')
+
+    if a == True :
+        if slot[k] != 7 : 
+            a = False
+   
+    t.sleep(0) 
+if a :
+    print("잭팟 !")
+    

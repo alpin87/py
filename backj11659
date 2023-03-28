@@ -1,0 +1,16 @@
+print('합을 구할 데이터수와 질문 갯수입력 : ')
+
+suNo, quitNo = map(int, input().split())
+num = list(map(int, input().split()))
+psum = [0]
+temp = 0
+
+for i in num:
+    temp = temp + 1
+    psum.append(temp)
+
+print(psum)
+
+for i in range(quitNo):
+    s, e = map(int, input().split())
+    print(psum[e]-psum[s-1])
